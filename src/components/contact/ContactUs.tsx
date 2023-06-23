@@ -71,7 +71,10 @@ function ContactUs({ setSelectedPage }: Props) {
 
   return (
     <section className="bg-primary-50" ref={myRef} id={SelectedPage.ContactUs}>
-      <div className="w-5/6 mx-auto py-16">
+      <motion.div
+        className="w-5/6 mx-auto py-16"
+        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+      >
         {/* Headings */}
         <motion.div
           className="md:3/5 pb-10"
@@ -159,7 +162,7 @@ function ContactUs({ setSelectedPage }: Props) {
             <div className="before:absolute before:-bottom-10 before:-right-10 before:z-[-1] lg:before:content-evolvetext"></div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

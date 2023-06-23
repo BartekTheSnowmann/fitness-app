@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="bg-gray-20">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <Home setSelectedPage={setSelectedPage} />
+      <Home />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />

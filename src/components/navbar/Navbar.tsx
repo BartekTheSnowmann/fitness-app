@@ -18,7 +18,7 @@ function Navbar({ selectedPage, setSelectedPage }: Props) {
   const [isTopOFPage, setIsTopOFPage] = useState(false);
   useEffect(() => {
     function calculateOffset() {
-      if (window.pageYOffset > 100) {
+      if (window.pageYOffset > 80) {
         setIsTopOFPage(true);
       } else {
         setIsTopOFPage(false);

@@ -37,7 +37,7 @@ function Benefits({ setSelectedPage }: Props) {
   ];
 
   const myRef = useRef<any>();
-  const isInView = useInView(myRef, { once: false, amount: 0.5 });
+  const isInView = useInView(myRef, { once: false });
 
   useEffect(() => {
     const setPage = () => {
@@ -81,8 +81,8 @@ function Benefits({ setSelectedPage }: Props) {
           </div>
           <motion.div
             className="md:w-4/6"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 1 }}
             transition={{ type: "spring", duration: 1.2 }}
           >

@@ -1,6 +1,3 @@
-import React from "react";
-import { SelectedPage } from "../../shared/types";
-import ActionButton from "../../shared/ActionButton";
 import {
   HomePageText,
   HomePageGraphic,
@@ -10,14 +7,10 @@ import {
 } from "../../assets";
 import { motion } from "framer-motion";
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-};
-
-function Home({ setSelectedPage }: Props) {
+function Home() {
   const headingsVariant = {
     hidden: {
-      x: 50,
+      x: -20,
     },
     show: {
       x: 0,
@@ -31,7 +24,7 @@ function Home({ setSelectedPage }: Props) {
   const childrenVariant = {
     hidden: {
       opacity: 0,
-      x: 50,
+      x: -20,
     },
     show: {
       opacity: 1,

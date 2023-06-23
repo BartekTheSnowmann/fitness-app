@@ -46,15 +46,7 @@ function OurClasses({ setSelectedPage }: Props) {
     },
   ];
 
-  const [width, setWidth] = useState(0);
-
-  const carouselRef = useRef<any>(null);
-  useEffect(() => {
-    setWidth(carouselRef?.current.offsetWidth);
-  }, []);
-
   const [progress, setProgress] = useState(1);
-
   const myRef = useRef<any>();
   const isInView = useInView(myRef, { once: false });
 
@@ -92,7 +84,7 @@ function OurClasses({ setSelectedPage }: Props) {
             ></motion.div>
           </div>
           {/* IMAGES */}
-          <div ref={carouselRef} className="overflow-hidden py-10">
+          <div className="overflow-hidden py-10">
             <motion.div
               layout
               initial={{ opacity: 0 }}
